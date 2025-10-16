@@ -1,15 +1,39 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+//    public static void main(String[] args) {
+//        Map<String, Integer> wordHistogram= new HashMap<>();
+//            String phrase= "Hello there ho ho ho ho";
+//            String [] myArray= phrase.split(" ");
+//
+//            for (String s: myArray){
+//                if (wordHistogram.containsKey(s)){
+//                    Integer frequency= wordHistogram.get(s);
+//                    wordHistogram.put(s, frequency+1);
+//                }else{
+//                wordHistogram.put(s, 1);
+//            }
+//    }
+//            wordHistogram.forEach((word, frequency) ->{
+//            System.out.println("The word: " + word + "appears " + frequency + "times");
+//            });
+//    }};
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+
+    public static void main(String[] args) {
+
+        Map <String, Integer> wordHistogram2= new TreeMap<>();
+
+        String phrase= "oh la la la la la la la la la";
+        String [] song= phrase.split(" ");
+
+        for (String s: song){
+            if (wordHistogram2.containsKey(s)){
+                Integer frequency= wordHistogram2.get(s);
+                wordHistogram2.put(s, frequency+1);
+                }else{
+                wordHistogram2.put(s, 1);
+            }
         }
-    }
-}
+        wordHistogram2.forEach((word, frequency)->{
+                        System.out.println("The word " + word + " appears " + frequency + " times");
+        });
+    }}
